@@ -1,0 +1,43 @@
+.top-bar {
+    background-color: #000;
+    color: #fcfcfc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 0;
+}
+
+.delivery-logo {
+    height: 20px;
+    margin-right: 10px;
+}
+
+.navbar-custom {
+    background-color: #ffffff;
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+    color: #000000;
+}
+
+.navbar-custom .navbar-logo {
+    height: 30px; /* Ajuste o tamanho do logo conforme necessário */
+}
+
+.navbar-custom .nav-link {
+   padding: 10px;
+}
+
+.mr-auto{
+    margin-left: 100px;
+}
+
+.ml-auto{
+    margin-right: 100px;
+    gap: 10px;
+}
+
+.navbar-custom .navbar-toggler {
+    border-color: #fff;
+}

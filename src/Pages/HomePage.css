@@ -1,20 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
 .banner-section img {
     width: 100%;
     height: auto;
+
+}
+
+.about-section,
+.foundations-section,
+.collections-section {
+    margin-top: 50px;
 }
 
 .about-section h2,
 .foundations-section h2,
 .collections-section h2 {
-    margin-bottom: 2rem;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
 }
 
-.about-section .row div,
-.foundations-section .row div,
-.collections-section .row div {
-    margin-bottom: 2rem;
+.about-section p,
+.foundations-section p,
+.collections-section p {
+    font-size: 1rem;
+}
+
+.foundations-section .col-md-3,
+.collections-section .col-md-4 {
+    margin-bottom: 30px;
 }
 
 footer {
+    margin-top: 50px;
+    padding: 20px;
     text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: black;
 }

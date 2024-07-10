@@ -15,6 +15,8 @@ function App() {
         <Route path="/collection/:country" element={<CollectionPage />} />
         <Route path="/product/:id" element={<ProductDetailPage />} />
         <Route path="/cart" element={<CartPage />} />
+        <Route exact path="/" component={HomePage} />
+        <Route path="/product/:id" component={ProductDetailPage} />
       </Routes>
     </Router>
   );
