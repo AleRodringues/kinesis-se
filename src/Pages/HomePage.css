@@ -1,0 +1,20 @@
+.banner-section img {
+    width: 100%;
+    height: auto;
+}
+
+.about-section h2,
+.foundations-section h2,
+.collections-section h2 {
+    margin-bottom: 2rem;
+}
+
+.about-section .row div,
+.foundations-section .row div,
+.collections-section .row div {
+    margin-bottom: 2rem;
+}
+
+footer {
+    text-align: center;
+}
