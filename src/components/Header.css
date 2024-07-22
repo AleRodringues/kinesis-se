@@ -1,43 +1,83 @@
+.navbar-custom{
+    height: 80px;
+}
+
 .top-bar {
-    background-color: #000;
-    color: #fcfcfc;
+    background-color: #F08324;
+    color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 5px 0;
+    padding: 1px 0;
 }
 
 .delivery-logo {
-    height: 20px;
+    height: 16px;
     margin-right: 10px;
 }
 
 .navbar-custom {
-    background-color: #ffffff;
+    background-color: #141414;
 }
 
 .navbar-custom .navbar-brand,
 .navbar-custom .nav-link {
-    color: #000000;
+    color: #fff;
 }
 
-.navbar-custom .navbar-logo {
-    height: 30px; /* Ajuste o tamanho do logo conforme necessário */
+.navbar-logo {
+    height: 30px;
 }
 
 .navbar-custom .nav-link {
-   padding: 10px;
+    padding: 10px;
 }
 
-.mr-auto{
+.mr-auto {
     margin-left: 100px;
 }
 
-.ml-auto{
+.ml-auto {
     margin-right: 100px;
-    gap: 10px;
+    gap: 20px;
 }
 
-.navbar-custom .navbar-toggler {
-    border-color: #fff;
+.cart-link {
+    position: relative;
+    padding: 20px 15px;
+    border-radius: 5px;
+}
+
+.cart-count {
+    position: absolute;
+    top: -2px;
+    right: -10px;
+    background-color: #F08324;
+    color: #fff;
+    border-radius: 60%;
+    padding: 3px 8px;
+    font-size: 14px;
+}
+
+.entrar-button {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 50px;
+    height: 50px;
+    padding: 5px 10px;
+    color: #F08324;
+    font-size: 14px;
+    font-weight: bold;
+    outline: none;
+}
+
+.entrar-button .user-icon {
+    width: 24px;
+    margin-right: 10px;
+}
+
+.entrar-button:hover {
+    background-color: #fff;
+    color: #F08324;
 }

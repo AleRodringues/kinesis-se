@@ -1,15 +1,18 @@
-import React from 'react';
+// HomePage.js
+import React, { useContext } from 'react';
 import './HomePage.css';
 import { Link } from 'react-router-dom';
-import Header from '../components/Header'; // Importe o componente Header
-
+import { CartContext } from '../CartContext';
 
 const HomePage = () => {
+    const { dispatch } = useContext(CartContext);
+
+    const handleAddToCart = (product) => {
+        dispatch({ type: 'ADD_TO_CART', payload: product });
+    };
+
     return (
-
-
         <div>
-            <Header /> {/* Renderize o componente Header */}
             <section className="banner-section">
                 <a href="#"><img src="/assets/banners/CollabJapao.png" alt="Banner" className="img-fluid" /></a>
             </section>
@@ -42,34 +45,61 @@ const HomePage = () => {
             <section className="foundations-section p-5 text-center">
                 <h2>Origens</h2>
                 <div className="row">
-                    <div className="col-md-3">
-                    <Link to="/product/1"> {/* Adicionando Link para a página de detalhes do produto */}
+                    <div className="col-md-3 product-card">
+                        <Link to="/product/1">
                             <img src="/assets/products/Origens/camisa1Origens.png" alt="Blusa Origens" className="img-fluid" />
-                            <p>Camiseta Básica Origens</p>
-                            <h1>R$ 89.9</h1>
                         </Link>
-
+                        <div className="product-info">
+                            <Link to="/product/1">
+                                <p className="product-name">Camiseta Básica Origens</p>
+                            </Link>
+                            <div className="product-price-add">
+                                <h1 className="product-price">R$ 89.9</h1>
+                                <button className="add-to-cart-button" onClick={() => handleAddToCart({ id: 1, name: 'Camiseta Básica Origens', price: 89.9 })}>+</button>
+                            </div>
+                        </div>
                     </div>
-                    <div className="col-md-3">
-                        <a href="#">
+                    <div className="col-md-3 product-card">
+                        <Link to="/product/2">
                             <img src="/assets/products/Origens/Blusa1Origens.png" alt="Moletom Origens" className="img-fluid" />
-                            <p>Moletom com Capuz Origens</p>
-                            <h1>R$ 179.9</h1>
-                        </a>
+                        </Link>
+                        <div className="product-info">
+                            <Link to="/product/2">
+                                <p className="product-name">Moletom com Capuz Origens</p>
+                            </Link>
+                            <div className="product-price-add">
+                                <h1 className="product-price">R$ 179.9</h1>
+                                <button className="add-to-cart-button" onClick={() => handleAddToCart({ id: 2, name: 'Moletom com Capuz Origens', price: 179.9 })}>+</button>
+                            </div>
+                        </div>
                     </div>
-                    <div className="col-md-3">
-                        <a href="#">
+                    <div className="col-md-3 product-card">
+                        <Link to="/product/3">
                             <img src="/assets/products/Origens/bone1Origens.png" alt="Bone Origens" className="img-fluid" />
-                            <p>Boné Snapback Origens</p>
-                            <h1>R$ 69.9</h1>
-                        </a>
+                        </Link>
+                        <div className="product-info">
+                            <Link to="/product/3">
+                                <p className="product-name">Boné Snapback Origens</p>
+                            </Link>
+                            <div className="product-price-add">
+                                <h1 className="product-price">R$ 69.9</h1>
+                                <button className="add-to-cart-button" onClick={() => handleAddToCart({ id: 3, name: 'Boné Snapback Origens', price: 69.9 })}>+</button>
+                            </div>
+                        </div>
                     </div>
-                    <div className="col-md-3">
-                        <a href="#">
+                    <div className="col-md-3 product-card">
+                        <Link to="/product/4">
                             <img src="/assets/products/Origens/jogger1Origens.jpg" alt="Calça Jogger Origens" className="img-fluid" />
-                            <p>Calça Jogger Origens</p>
-                            <h1>R$ 149.9</h1>
-                        </a>
+                        </Link>
+                        <div className="product-info">
+                            <Link to="/product/4">
+                                <p className="product-name">Calça Jogger Origens</p>
+                            </Link>
+                            <div className="product-price-add">
+                                <h1 className="product-price">R$ 149.9</h1>
+                                <button className="add-to-cart-button" onClick={() => handleAddToCart({ id: 4, name: 'Calça Jogger Origens', price: 149.9 })}>+</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>

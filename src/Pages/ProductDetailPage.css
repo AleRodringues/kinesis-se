@@ -1,4 +1,3 @@
-/* styles.css */
 .product-detail {
     padding: 20px;
 }
@@ -63,4 +62,17 @@
 
 .similar-products h2 {
     margin-bottom: 20px;
+}
+
+.product-card {
+    margin-bottom: 20px;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+}
+
+.product-card .product-info {
+    text-align: center;
 }

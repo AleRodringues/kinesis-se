@@ -1,36 +1,24 @@
-import React, { useState } from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+// src/Pages/OrigensPage.js
+import React from 'react';
 import ProductCard from '../components/ProductCard';
-import CustomPagination from '../components/Pagination';
+import './OrigensPage.css';
 
-const products = [
-    // Array com objetos dos produtos
+const sampleProducts = [
+    { id: 1, name: 'Product 1', price: '$10', image: 'https://via.placeholder.com/150' },
+    { id: 2, name: 'Product 2', price: '$20', image: 'https://via.placeholder.com/150' },
+
 ];
 
 function OrigensPage() {
-    const [currentPage, setCurrentPage] = useState(1);
-    const productsPerPage = 12;
-    const totalPages = Math.ceil(products.length / productsPerPage);
-
-    const currentProducts = products.slice((currentPage - 1) * productsPerPage, currentPage * productsPerPage);
-
     return (
-        <>
-            <Header />
-            <Container>
-                <Row>
-                    {currentProducts.map(product => (
-                        <Col key={product.id} md={3}>
-                            <ProductCard product={product} />
-                        </Col>
-                    ))}
-                </Row>
-                <CustomPagination currentPage={currentPage} totalPages={totalPages} onPageChange={setCurrentPage} />
-            </Container>
-            <Footer />
-        </>
+        <div>
+            <h1>Origens Collection</h1>
+            <div className="product-grid">
+                {sampleProducts.map(product => (
+                    <ProductCard key={product.id} product={product} />
+                ))}
+            </div>
+        </div>
     );
 }
 
