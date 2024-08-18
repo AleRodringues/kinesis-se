@@ -137,4 +137,4 @@ const Nigeria = [
     }
 ];
 
-export default Nigeria;
+module.exports = Nigeria;

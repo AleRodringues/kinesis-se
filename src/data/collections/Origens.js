@@ -68,4 +68,4 @@ const Origens = [
     }
 ];
 
-export default Origens;
+module.exports = Origens;

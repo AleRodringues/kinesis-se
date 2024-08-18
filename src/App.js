@@ -8,6 +8,7 @@ import CartPage from './Pages/CartPage';
 import { CartProvider } from './CartContext';
 import Header from './components/Header';
 
+
 function App() {
   return (
     <CartProvider>

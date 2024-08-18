@@ -120,4 +120,4 @@ const Japao = [
     }
 ];
 
-export default Japao;
+module.exports = Japao;

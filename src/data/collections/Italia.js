@@ -69,4 +69,4 @@ const Italia = [
     }
 ];
 
-export default Italia;
+module.exports = Italia;

@@ -137,4 +137,4 @@ const NovaZelandia = [
     }
 ];
 
-export default NovaZelandia;
+module.exports = NovaZelandia;

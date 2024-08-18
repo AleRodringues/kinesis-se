@@ -138,4 +138,4 @@ const Mexico = [
 ];
 
 
-export default Mexico;
+module.exports = Mexico;
