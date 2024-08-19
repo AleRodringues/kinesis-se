@@ -1,5 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Oswald:wght@400&display=swap');
+
+body {
+    font-family: Oswald, sans-serif; /* Texto normal */
+}
+
 .home-page {
-    font-family: Arial, sans-serif;
+    font-family: Oswald, sans-serif; /* Texto normal */
 }
 
 .banner-section .banner-img {
@@ -25,6 +31,11 @@
 .foundations-section p,
 .collections-section p {
     font-size: 1rem;
+}
+
+h1, h2, h3, .product-name {
+    font-family: Montserrat, sans-serif; /* Títulos */
+    font-weight: 900; /* Montserrat Black */
 }
 
 .about-cards {
@@ -81,7 +92,7 @@
 }
 
 .add-to-cart-button {
-    background-color: #e73e3e;
+    background-color: #F08324;
     border: none;
     border-radius: 5px;
     color: #fff;
@@ -112,4 +123,39 @@ a {
 .collection-img {
     width: 100%;
     height: auto;
+}
+
+.collections-section {
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.collections-section h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.collab-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas */
+    gap: 20px;
+}
+
+.collab-card {
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+.collab-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.collab-name {
+    font-family: Montserrat, sans-serif;
+    font-weight: 900;
+    margin-top: 10px;
 }

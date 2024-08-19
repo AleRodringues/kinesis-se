@@ -1,16 +1,9 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import './HomePage.css';
 import { Link } from 'react-router-dom';
-import { CartContext } from '../CartContext';
 import Footer from '../components/Footer';
 
 const HomePage = () => {
-    const { dispatch } = useContext(CartContext);
-
-    const handleAddToCart = (product) => {
-        dispatch({ type: 'ADD_TO_CART', payload: product });
-    };
-
     return (
         <div className="home-page">
             <section className="banner-section">
@@ -31,7 +24,7 @@ const HomePage = () => {
                     </div>
                     <div className="about-card">
                         <Link to="/about-us#authentic-design">
-                            <img src="/assets/banners/DesignAutentico.jpg" alt="Design Autentico" className="card-img" />
+                            <img src="/assets/banners/DesignAutentico.jpg" alt="Design Autêntico" className="card-img" />
                             <h3>Design Autêntico</h3>
                             <p>Trabalhamos com artistas e artesãos locais para garantir que nossos produtos reflitam verdadeiramente as tradições e estilos únicos de cada cultura que nos conectamos.</p>
                         </Link>
@@ -59,7 +52,7 @@ const HomePage = () => {
                             </Link>
                             <div className="product-price-add">
                                 <h1 className="product-price">R$ 89.9</h1>
-                                <button className="add-to-cart-button" onClick={() => handleAddToCart({ id: 1, name: 'Camiseta Básica Origens', price: 89.9 })}>+</button>
+                                
                             </div>
                         </div>
                     </div>
@@ -73,7 +66,7 @@ const HomePage = () => {
                             </Link>
                             <div className="product-price-add">
                                 <h1 className="product-price">R$ 179.9</h1>
-                                <button className="add-to-cart-button" onClick={() => handleAddToCart({ id: 2, name: 'Moletom com Capuz Origens', price: 179.9 })}>+</button>
+                                
                             </div>
                         </div>
                     </div>
@@ -87,10 +80,44 @@ const HomePage = () => {
                             </Link>
                             <div className="product-price-add">
                                 <h1 className="product-price">R$ 69.9</h1>
-                                <button className="add-to-cart-button" onClick={() => handleAddToCart({ id: 3, name: 'Boné Snapback Origens', price: 69.9 })}>+</button>
+                                
                             </div>
                         </div>
                     </div>
+                </div>
+            </section>
+
+            <section className="collections-section">
+                <h2>Nossas Collabs</h2>
+                <div className="collab-grid">
+                    <Link to="/collections#brasil" className="collab-card">
+                        <img src="/assets/Flags/FlagBra.jpg" alt="Coleção Brasil" className="collab-img" />
+                        <p className="collab-name">Brasil</p>
+                    </Link>
+                    <Link to="/collections#italia" className="collab-card">
+                        <img src="/assets/Flags/FlaIta.jpg" alt="Coleção Itália" className="collab-img" />
+                        <p className="collab-name">Itália</p>
+                    </Link>
+                    <Link to="/collections#japao" className="collab-card">
+                        <img src="/assets/Flags/FLaJap.jpg" alt="Coleção Japão" className="collab-img" />
+                        <p className="collab-name">Japão</p>
+                    </Link>
+                    <Link to="/collections#mexico" className="collab-card">
+                        <img src="/assets/Flags/FlagMex.jpg" alt="Coleção México" className="collab-img" />
+                        <p className="collab-name">México</p>
+                    </Link>
+                    <Link to="/collections#nigeria" className="collab-card">
+                        <img src="/assets/Flags/FlagNig.jpg" alt="Coleção Nigéria" className="collab-img" />
+                        <p className="collab-name">Nigéria</p>
+                    </Link>
+                    <Link to="/collections#nova-zelandia" className="collab-card">
+                        <img src="/assets/Flags/FlagNz.jpg" alt="Coleção Nova Zelândia" className="collab-img" />
+                        <p className="collab-name">Nova Zelândia</p>
+                    </Link>
+                    <Link to="/collections#origens" className="collab-card">
+                        <img src="/assets/Flags/FlagK.jpg" alt="Coleção Origens" className="collab-img" />
+                        <p className="collab-name">Origens</p>
+                    </Link>
                 </div>
             </section>
 

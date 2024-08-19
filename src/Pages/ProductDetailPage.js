@@ -40,7 +40,7 @@ function ProductDetailPage() {
                         {product.image && <img src={product.image} alt={product.name} />}
                     </div>
                     <div className="product-info">
-                        <h1 className="product-name">{product.name}</h1>
+                        <h1 className="name-product">{product.name}</h1>
                         <p className="product-rating">
                             <span>{product.rating} Estrelas</span> |
                             <span>{product.comments} Reviews</span> |

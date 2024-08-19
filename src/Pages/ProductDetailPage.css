@@ -31,6 +31,12 @@
 
 .product-name {
     font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.name-product{
+    font-family: 'Montserrat', sans-serif;
     font-size: 32px;
     margin-bottom: 10px;
 }
@@ -129,12 +135,6 @@
     align-items: center;
 }
 
-.product-name {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 35px;
-    margin-bottom: 10px;
-}
-
 .similar-product-link {
     font-family: 'Montserrat', sans-serif;
     font-size: 10px;
@@ -147,19 +147,4 @@
     color: #F08324;
     margin-bottom: 15px;
     margin-right: 15px;
-}
-
-.add-to-cart {
-    background-color: #F08324;
-    border: none;
-    color: #fff;
-    font-family: 'Montserrat', sans-serif;
-    padding: 7px 20px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.add-to-cart:hover {
-    background-color: #be6619;
 }

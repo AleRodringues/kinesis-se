@@ -1,19 +1,22 @@
 .collections-page {
-    padding: 20px;
+    padding: 20px 0px 0px 0px;
 }
 
 .collection-section {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    padding: 40px;
     margin-bottom: 20px;
     background-color: #f5f5f5;
-    border-radius: 8px;
 }
 
 .collection-info {
     width: 20%;
     text-align: left;
+}
+
+.Collections-title{
+    margin-left: 20px;
 }
 
 .collection-info h2 {
@@ -39,16 +42,14 @@
     display: flex;
     flex-wrap: wrap;
     width: 75%;
-    /* Ajustado para se alinhar com a info */
 }
 
 .product-card {
     background-color: white;
-    border: 1px solid #ccc;
     border-radius: 4px;
     overflow: hidden;
     margin: 10px;
-    width: calc(33.333% - 20px);
+    width: calc(33.333% - 10px);
 }
 
 .product-info {
@@ -65,25 +66,34 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 10px;
 }
 
 .product-price {
     font-size: 1.2rem;
     color: #333;
+    margin: 0;
+    line-height: 1;
+    flex-grow: 1; 
 }
 
 .add-to-cart-button {
     background-color: #F08324;
     color: white;
     border: none;
-    padding: 5px 10px;
+    padding: 8px 12px;
     cursor: pointer;
     border-radius: 4px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0; 
 }
+
 
 .add-to-cart-button:hover {
     background-color: #d17114;
-    /* Cor de hover para feedback visual */
 }
 
 .product-card img {

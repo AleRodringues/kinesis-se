@@ -1,17 +1,17 @@
 import React from 'react';
 import { Card, Button } from 'react-bootstrap';
-import './ProductCard.css'; // Importa o CSS para o componente
+import './ProductCard.css';
 
 const ProductCard = ({ product }) => {
     return (
-        <Card className="product-card-item">
-            <Card.Img variant="top" src={product.image} className="product-card-img" />
+        <Card className="product-card-item2">
+            <Card.Img variant="top" src={product.image} className="product-card-img2" />
             <Card.Body>
-                <Card.Title className="product-card-title">{product.name}</Card.Title>
-                <Card.Text className="product-card-text">
+                
+                <Card.Text className="product-card-text2">
                     {product.price}
                 </Card.Text>
-                <Button variant="primary" className="product-card-button">Add to Cart</Button>
+                
             </Card.Body>
         </Card>
     );

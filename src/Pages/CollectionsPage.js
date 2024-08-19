@@ -1,7 +1,8 @@
-import React, { useContext } from 'react';
-import './CollectionsPage.css';
+import React, { useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../CartContext';
+import Footer from '../components/Footer';
+import './CollectionsPage.css';
 
 // Importando as coleções individuais
 import Brasil from '../data/collections/Brasil';
@@ -60,29 +61,53 @@ const collections = [
 const CollectionsPage = () => {
     const { dispatch } = useContext(CartContext); // Usando o contexto
 
+    useEffect(() => {
+        // Função para rolar para a âncora correta
+        const scrollToAnchor = () => {
+            const hash = window.location.hash;
+            if (hash) {
+                const element = document.querySelector(hash);
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        };
+
+        // Executar a função ao carregar o componente
+        scrollToAnchor();
+
+        // Adicionar um listener para rolar para a âncora após mudanças na URL
+        window.addEventListener('hashchange', scrollToAnchor);
+
+        // Limpar o listener quando o componente for desmontado
+        return () => {
+            window.removeEventListener('hashchange', scrollToAnchor);
+        };
+    }, []);
+
     const handleAddToCart = (product) => {
         dispatch({ type: 'ADD_TO_CART', payload: product });
     };
 
     return (
         <div className="collections-page">
-            <h1>Collections</h1>
-            {collections.map((collection, index) => (
+            <h1 className="Collections-title">Collections</h1>
+            {collections.map((collection) => (
                 <div
-                    key={index}
-                    id={collection.name.toLowerCase()}
+                    key={collection.name}
+                    id={collection.name.toLowerCase().replace(/\s+/g, '-')} // Corrige espaços para hífens
                     className="collection-section"
                 >
                     <div className="collection-info">
                         <h2>{collection.name}</h2>
-                        <p className="collection-essence">{collection.essence}</p>
+                        <p className="collection-description">{collection.description}</p>
                         <img src={collection.flag} alt={`${collection.name} flag`} className="collection-flag" />
                     </div>
                     <div className="product-list">
                         {collection.data.map((product) => (
                             <div key={product.id} className="product-card">
                                 <Link to={`/product/${product.id}`}>
-                                    <img src={product.image} alt={product.name} className="img-fluid" />
+                                    <img src={product.image} alt={product.name} className="product-image" />
                                 </Link>
                                 <div className="product-info">
                                     <Link to={`/product/${product.id}`}>
@@ -103,6 +128,7 @@ const CollectionsPage = () => {
                     </div>
                 </div>
             ))}
+            <Footer />
         </div>
     );
 };

@@ -1,3 +1,19 @@
+.header-container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Certifique-se de que o header fique acima de outros elementos */
+}
+
+.header-container .navbar-custom {
+    height: 80px;
+    background-color: #141414;
+}
+
+body {
+    padding-top: 100px; /* Ajuste essa altura para que o conteúdo não fique embaixo do header */
+}
+
 .header-container .top-bar {
     background-color: #F08324;
     color: #fff;
