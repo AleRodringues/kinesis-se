@@ -1,8 +1,4 @@
-.navbar-custom{
-    height: 80px;
-}
-
-.top-bar {
+.header-container .top-bar {
     background-color: #F08324;
     color: #fff;
     display: flex;
@@ -11,44 +7,61 @@
     padding: 1px 0;
 }
 
-.delivery-logo {
+.header-container .delivery-logo {
     height: 16px;
     margin-right: 10px;
 }
 
-.navbar-custom {
+.header-container .navbar-custom {
+    height: 80px;
     background-color: #141414;
 }
 
-.navbar-custom .navbar-brand,
-.navbar-custom .nav-link {
+.header-container .navbar-custom .navbar-brand,
+.header-container .navbar-custom .nav-link {
     color: #fff;
 }
 
-.navbar-logo {
+.header-container .navbar-logo {
     height: 30px;
 }
 
-.navbar-custom .nav-link {
+.header-container .navbar-custom .nav-link {
     padding: 10px;
 }
 
-.mr-auto {
-    margin-left: 100px;
+.header-container .navbar-nav {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.ml-auto {
-    margin-right: 100px;
-    gap: 20px;
+.header-container .mr-auto {
+    margin-left: 0;
 }
 
-.cart-link {
+.header-container .ml-auto {
+    margin-right: 0;
+    display: flex;
+    align-items: center;
+}
+
+.header-container .cart-link {
     position: relative;
-    padding: 20px 15px;
+    padding: 0 15px;
     border-radius: 5px;
+    display: flex;
+    align-items: center;
 }
 
-.cart-count {
+.header-container .cart-icon {
+    width: 25px;
+    height: 25px;
+    margin-right: 2px;
+}
+
+.header-container .cart-count {
     position: absolute;
     top: -2px;
     right: -10px;
@@ -56,10 +69,11 @@
     color: #fff;
     border-radius: 60%;
     padding: 3px 8px;
+    margin-right: 10px;
     font-size: 14px;
 }
 
-.entrar-button {
+.header-container .entrar-button {
     display: flex;
     align-items: center;
     background-color: #fff;
@@ -70,14 +84,17 @@
     font-size: 14px;
     font-weight: bold;
     outline: none;
+    margin-left: 10px;
 }
 
-.entrar-button .user-icon {
+.header-container .entrar-button .user-icon {
     width: 24px;
+    height: 24px;
+    /* Certifique-se de que o ícone de usuário tem o mesmo tamanho que o ícone do carrinho */
     margin-right: 10px;
 }
 
-.entrar-button:hover {
+.header-container .entrar-button:hover {
     background-color: #fff;
     color: #F08324;
 }

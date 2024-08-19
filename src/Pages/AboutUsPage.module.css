@@ -1,0 +1,38 @@
+.aboutUsPage {
+    font-family: Arial, sans-serif;
+}
+
+.introSection {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+}
+
+.introSection img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.detailsSection {
+    background-color: #ffffff;
+    padding: 50px 0;
+}
+
+.detailsSection img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.detailsSection h3 {
+    margin-top: 20px;
+    font-size: 1.75rem;
+}
+
+.detailsSection p {
+    font-size: 1.125rem;
+    color: #333;
+}
+
+.mb-5 {
+    margin-bottom: 3rem !important;
+}

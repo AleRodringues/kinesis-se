@@ -1,4 +1,3 @@
-// CartContext.js
 import React, { createContext, useReducer } from 'react';
 
 const CartContext = createContext();
@@ -35,6 +34,8 @@ const cartReducer = (state, action) => {
             );
             const totalQuantity = updatedItemsQuantity.reduce((acc, item) => acc + item.quantity, 0);
             return { ...state, items: updatedItemsQuantity, totalQuantity };
+        case 'CLEAR_CART':
+            return { ...state, items: [], totalQuantity: 0 };
         default:
             return state;
     }

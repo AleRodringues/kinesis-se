@@ -1,0 +1,17 @@
+.confirmation-container {
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.confirmation-container h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.confirmation-container p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 30px;
+}

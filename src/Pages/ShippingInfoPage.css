@@ -1,0 +1,92 @@
+/* Container principal */
+.shipping-info-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Título principal */
+.shipping-info-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Formulário */
+.shipping-info-form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Grupos de formulário */
+.shipping-info-form-group {
+    margin-bottom: 15px;
+}
+
+/* Labels */
+.shipping-info-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    color: #555;
+}
+
+/* Inputs e Textarea */
+.shipping-info-input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.shipping-info-input textarea {
+    resize: none;
+}
+
+/* Botão de confirmar */
+.shipping-info-submit-button {
+    background-color: #F08324;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+}
+
+.shipping-info-submit-button:hover {
+    background-color: #e0701d;
+}
+
+/* Row */
+.shipping-info-form .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -10px;
+}
+
+.shipping-info-form .col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 10px;
+}
+
+.shipping-info-form .col-md-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 10px;
+}
+
+/* Ajuste para dispositivos menores */
+@media (max-width: 768px) {
+    .shipping-info-form .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}

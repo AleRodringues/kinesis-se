@@ -19,7 +19,7 @@ function ProductDetailPage() {
     }, [id]);
 
     if (!product) {
-        return <div>Product not found</div>;
+        return <div>Produto não encontrado</div>;
     }
 
     // Filtra os produtos similares pela mesma coleção, exceto o produto atual
@@ -35,50 +35,42 @@ function ProductDetailPage() {
     return (
         <>
             <Container className="product-detail">
-                <Row>
-                    <Col md={6}>
-                        <img src={product.image} alt={product.name} className="img-fluid" />
-                        <Row>
-                            {product.thumbnails.map((thumb, index) => (
-                                <Col key={index} md={2} className="thumbnail">
-                                    <img src={thumb} alt="Thumbnail" className="img-thumbnail" />
-                                </Col>
-                            ))}
-                        </Row>
-                    </Col>
-                    <Col md={6} className="product-info">
-                        <h1>{product.name}</h1>
-                        <p>
+                <div className="product-detail-section">
+                    <div className="product-image">
+                        {product.image && <img src={product.image} alt={product.name} />}
+                    </div>
+                    <div className="product-info">
+                        <h1 className="product-name">{product.name}</h1>
+                        <p className="product-rating">
                             <span>{product.rating} Estrelas</span> |
-                            <span>{product.reviews} Reviews</span> |
-                            <span>{product.orders} Vendas</span>
+                            <span>{product.comments} Reviews</span> |
+                            <span>{product.sales} Vendas</span>
                         </p>
-                        <Form>
-                            <Form.Group controlId="formSize">
-                                <Form.Label>Tamanho</Form.Label>
-                                <Form.Control as="select">
-                                    {product.sizes.map((size) => (
-                                        <option key={size}>{size}</option>
-                                    ))}
-                                </Form.Control>
-                            </Form.Group>
-                        </Form>
                         <p>{product.description}</p>
                         <h3 className="price">
                             ${product.price} <small>${product.discount}</small>
                         </h3>
                         <p>Estoque: {product.stock}</p>
+                        <Form>
+                            <Form.Group controlId="formSize">
+                                <Form.Label>Tamanho</Form.Label>
+                                <Form.Control as="select">
+                                    {product.sizes && product.sizes.map((size) => (
+                                        <option key={size}>{size}</option>
+                                    ))}
+                                </Form.Control>
+                            </Form.Group>
+                        </Form>
                         <Form inline className="actions">
-                            <Form.Control type="number" min="1" max={product.stock} defaultValue="1" className="mr-2" />
-                            <Button variant="primary" className="mr-2" onClick={handleAddToCart}>
-                                Add Carinho
+                            <Button variant="primary" className="add-to-cart" onClick={handleAddToCart}>
+                                Adicionar ao Carrinho
                             </Button>
                             <Link to="/cart">
-                                <Button variant="success">Compra</Button>
+                                <Button variant="dark" className="buy-now">Comprar</Button>
                             </Link>
                         </Form>
-                    </Col>
-                </Row>
+                    </div>
+                </div>
                 <Row className="similar-products">
                     <Col>
                         <h2>Produtos Similares</h2>

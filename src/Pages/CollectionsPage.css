@@ -1,0 +1,92 @@
+.collections-page {
+    padding: 20px;
+}
+
+.collection-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+}
+
+.collection-info {
+    width: 20%;
+    text-align: left;
+}
+
+.collection-info h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.collection-essence {
+    font-size: 1rem;
+    color: #555;
+    margin: 10px 0;
+}
+
+.collection-flag {
+    width: 350px;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 5%;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 75%;
+    /* Ajustado para se alinhar com a info */
+}
+
+.product-card {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 10px;
+    width: calc(33.333% - 20px);
+}
+
+.product-info {
+    padding: 10px;
+}
+
+.product-name {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.product-price-add {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-price {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.add-to-cart-button {
+    background-color: #F08324;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.add-to-cart-button:hover {
+    background-color: #d17114;
+    /* Cor de hover para feedback visual */
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+}
