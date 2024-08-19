@@ -29,7 +29,6 @@ function Footer() {
                         <ul>
                             <li><a href="#faq">FAQ</a></li>
                             <li><a href="#contact">Contact Us</a></li>
-                            <li><a href="#return">Return Policy</a></li>
                         </ul>
                     </Col>
                 </Row>
